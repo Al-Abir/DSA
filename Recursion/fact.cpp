@@ -1,16 +1,20 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-int fact(int n){
-    if(n==0){
-        return 1;
-    }
-    return n*(n-1);
+
+int fact(int a){
+  
+  if(a==0)
+     return 1;
+
+   int smaller = fact(a-1) ;
+   int big = a*smaller;
+   return big;
 }
 int main(){
 
-    int n;
-    cin>>n;
-    cout<< fact(n);
-
-    return 0;
+   int n;
+   cin>>n;
+   int ans=fact(n);
+   cout<<ans<<endl;
+   
 }
