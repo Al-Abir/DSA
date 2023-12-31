@@ -9,8 +9,9 @@ public:
             return;
         }
         // take
-        helper(s, temp + s[index], index + 1, ans);
-        // not take
+        temp.push_back(s[index]);
+        helper(s, temp, index + 1, ans);
+        temp.pop_back();
         helper(s, temp, index + 1, ans);
 
         return;
