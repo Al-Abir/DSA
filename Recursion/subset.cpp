@@ -10,14 +10,17 @@ private:
             ans.push_back(output);
             return;
         }
-         int element = nums[index];
-        output.push_back(element);
-        solve(nums, output, index + 1, ans);
-        output.pop_back();
+        
+        // Include the current element
+       
+        // output.pop_back();
         // Exclude the current element
         solve(nums, output, index + 1, ans);
 
-        // Include the current element
+          int element = nums[index];
+          output.push_back(element);
+          solve(nums, output, index + 1, ans);
+
         
     }
 
