@@ -1,25 +1,22 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-
-void count(int n){
-
+int counting(int n)
+{
     if(n==0){
-        return ;
+        return 0;
     }
+    //return counting(n/10)+1;
+      return counting(n/10)+(n%10);
 
-   
-
-     count(n-1);
-       cout<<n<<endl; 
-   
 }
+
 int main(){
+    // factorial
+
+   
+    int ans = counting(1204567);
+    cout<<ans;
 
 
-    int n;
-    cin>>n;
-    count(n);
-    cout<<endl;
- return 0;
+  return 0;
 }
